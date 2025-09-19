@@ -40,7 +40,7 @@
 ## 🏗️ **Architecture Overview**
 
 ```
-![alt text](./diagram-export-9-19-2025-10_13_04-PM.png)
+![Architecture Diagam](diagram-export-9-19-2025-10_13_04-PM.png)
 ```
 ---
 
