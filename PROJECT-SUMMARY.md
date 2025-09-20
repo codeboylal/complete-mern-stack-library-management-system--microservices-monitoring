@@ -40,7 +40,7 @@
 ## 🏗️ **Architecture Overview**
 
 ```
-![Project Structure](README-IMAGES/structure_diagram.png)
+![Project Structure](./README-IMAGES/structure_diagram.png)
 
 ```
 ---
@@ -176,7 +176,6 @@ LYBOOK/
 | `PUT`   | `/api/books/:id/restore`    | Restore book        | 🔄 Clears cache   |
 | `DELETE`| `/api/books/:id`            | Delete book         | 🔄 Clears cache   |
 | `GET`   | `/metrics`                  | Prometheus metrics  | None              |
------------------------------------------------------------------------------------
 
 ---
 
