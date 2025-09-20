@@ -39,10 +39,8 @@
 
 ## 🏗️ **Architecture Overview**
 
-```
 ![Project Structure](./README-IMAGES/structure_diagram.png)
 
-```
 ---
 
 ## 🛠️ **Quick Start Guide**
@@ -229,7 +227,7 @@ LYBOOK/
 ## 🚨 **Troubleshooting Guide**
 
 ### **Common Issues & Solutions:**
---------------------------------------------------------------------------------------------------------------
+
 | Problem                 | Diagnosis                                       | Solution                       |
 |-------------------------|-------------------------------------------------|--------------------------------|
 | Backend not responding  | `curl http://localhost:5000/health`             | `./setup-mode.sh core`         |
