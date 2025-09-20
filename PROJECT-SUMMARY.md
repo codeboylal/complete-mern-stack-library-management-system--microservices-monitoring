@@ -40,7 +40,8 @@
 ## 🏗️ **Architecture Overview**
 
 ```
-![Architecture Diagam](/home/elon/Desktop/LYBOOK/README-IMAGES/structure_diagram.png)
+![Project Structure](README-IMAGES/structure_diagram.png)
+
 ```
 ---
 
