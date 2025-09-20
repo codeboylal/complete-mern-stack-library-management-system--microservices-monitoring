@@ -86,3 +86,7 @@ docker-compose.override.yml
 .Trashes
 ehthumbs.db
 Thumbs.db 
+
+
+# ReadME-Images
+README-Images/

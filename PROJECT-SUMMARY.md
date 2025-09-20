@@ -40,7 +40,7 @@
 ## 🏗️ **Architecture Overview**
 
 ```
-![Architecture Diagam](diagram-export-9-19-2025-10_13_04-PM.png)
+![Architecture Diagam](/home/elon/Desktop/LYBOOK/README-IMAGES/diagram-export-9-19-2025-10_13_04-PM.png)
 ```
 ---
 
@@ -162,19 +162,20 @@ LYBOOK/
 
 ## 🔧 **API Endpoints**
 
-| Method | Endpoint | Description | Cache Impact |
-|--------|----------|-------------|--------------|
-| `GET` | `/health` | System health check | None |
-| `GET` | `/api/books` | Get all books | ✅ Cached (5min) |
-| `GET` | `/api/books?genre=X` | Filter by genre | ✅ Cached (5min) |
-| `GET` | `/api/books?isArchived=true` | Get archived books | ✅ Cached (5min) |
-| `GET` | `/api/books/:id` | Get specific book | None |
-| `POST` | `/api/books` | Create new book | 🔄 Clears cache |
-| `PUT` | `/api/books/:id` | Update book | 🔄 Clears cache |
-| `PUT` | `/api/books/:id/archive` | Archive book | 🔄 Clears cache |
-| `PUT` | `/api/books/:id/restore` | Restore book | 🔄 Clears cache |
-| `DELETE` | `/api/books/:id` | Delete book | 🔄 Clears cache |
-| `GET` | `/metrics` | Prometheus metrics | None |
+| Method  | Endpoint                    | Description         |Cache Impact       |
+|---------|-----------------------------|---------------------|-------------------|
+| `GET`   | `/health`                   | System health check | None              |
+| `GET`   | `/api/books`                | Get all books       | ✅ Cached (5min)  |
+| `GET`   | `/api/books?genre=X`        | Filter by genre     | ✅ Cached (5min)  |
+| `GET`   | `/api/books?isArchived=true`| Get archived books  | ✅ Cached (5min)  |
+| `GET`   | `/api/books/:id`            | Get specific book   | None              |
+| `POST`  | `/api/books`                | Create new book     | 🔄 Clears cache   |
+| `PUT`   | `/api/books/:id`            | Update book         | 🔄 Clears cache   |
+| `PUT`   | `/api/books/:id/archive`    | Archive book        | 🔄 Clears cache   |
+| `PUT`   | `/api/books/:id/restore`    | Restore book        | 🔄 Clears cache   |
+| `DELETE`| `/api/books/:id`            | Delete book         | 🔄 Clears cache   |
+| `GET`   | `/metrics`                  | Prometheus metrics  | None              |
+-----------------------------------------------------------------------------------
 
 ---
 
@@ -228,14 +229,15 @@ LYBOOK/
 ## 🚨 **Troubleshooting Guide**
 
 ### **Common Issues & Solutions:**
-
-| Problem | Diagnosis | Solution |
-|---------|-----------|----------|
-| Backend not responding | `curl http://localhost:5000/health` | `./setup-mode.sh core` |
-| Books not appearing | Check cache | `docker logs lybook-backend-1` |
-| Kong gateway failing | `docker logs lybook-kong-1` | Check `api-gateway/kong.yml` |
-| Database connection | `docker exec -it lybook-mongo-1 mongosh` | Verify MongoDB credentials |
-| Cache issues | `docker exec -it lybook-redis-1 redis-cli ping` | Restart Redis container |
+--------------------------------------------------------------------------------------------------------------
+| Problem                 | Diagnosis                                       | Solution                       |
+|-------------------------|-------------------------------------------------|--------------------------------|
+| Backend not responding  | `curl http://localhost:5000/health`             | `./setup-mode.sh core`         |
+| Books not appearing     | Check cache                                     | `docker logs lybook-backend-1` |
+| Kong gateway failing    | `docker logs lybook-kong-1`                     | Check `api-gateway/kong.yml`   |
+| Database connection     | `docker exec -it lybook-mongo-1 mongosh`        | Verify MongoDB credentials     |
+| Cache issues            | `docker exec -it lybook-redis-1 redis-cli ping` | Restart Redis container        |
+--------------------------------------------------------------------------------------------------------------
 
 ### **Emergency Commands:**
 ```bash
