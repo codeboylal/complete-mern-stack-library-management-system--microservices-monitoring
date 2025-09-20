@@ -40,7 +40,7 @@
 ## 🏗️ **Architecture Overview**
 
 ```
-![Architecture Diagam](/home/elon/Desktop/LYBOOK/README-IMAGES/diagram-export-9-19-2025-10_13_04-PM.png)
+![Architecture Diagam](/home/elon/Desktop/LYBOOK/README-IMAGES/structure_diagram.png)
 ```
 ---
 
