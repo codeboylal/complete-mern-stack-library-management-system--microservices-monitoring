@@ -19,6 +19,7 @@ services:
       - ./backend/logs:/app/logs
     networks:
       - lybook-network
+    restart: always
 
   frontend:
     build: ./frontend
@@ -30,6 +31,7 @@ services:
       - backend
     networks:
       - lybook-network
+    restart: always
 
   # Your existing MongoDB
   mongo:
@@ -45,6 +47,7 @@ services:
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     networks:
       - lybook-network
+    restart: always
 
   # Redis for caching
   redis:
@@ -55,6 +58,7 @@ services:
       - redis_data:/data
     networks:
       - lybook-network
+    restart: always
 
   # RabbitMQ for messaging
   rabbitmq:
@@ -69,6 +73,7 @@ services:
       - rabbitmq_data:/var/lib/rabbitmq
     networks:
       - lybook-network
+    restart: always
 
   # Prometheus for metrics
   prometheus:
@@ -86,6 +91,7 @@ services:
       - '--web.enable-lifecycle'
     networks:
       - lybook-network
+    restart: always
 
   # Grafana for visualization
   grafana:
@@ -99,6 +105,7 @@ services:
       - ./monitoring/grafana/provisioning:/etc/grafana/provisioning
     networks:
       - lybook-network
+    restart: always
 
   # Jaeger for distributed tracing
   jaeger:
@@ -110,6 +117,7 @@ services:
       - COLLECTOR_ZIPKIN_HOST_PORT=:9411
     networks:
       - lybook-network
+    restart: always
 
   # Elasticsearch for logging
   elasticsearch:
@@ -124,6 +132,7 @@ services:
       - elasticsearch_data:/usr/share/elasticsearch/data
     networks:
       - lybook-network
+    restart: always
 
   # Logstash for log processing
   logstash:
@@ -135,6 +144,7 @@ services:
       - elasticsearch
     networks:
       - lybook-network
+    restart: always
 
   # Kibana for log visualization
   kibana:
@@ -147,6 +157,7 @@ services:
       - elasticsearch
     networks:
       - lybook-network
+    restart: always
 
   # Kong API Gateway
   kong:
@@ -168,6 +179,7 @@ services:
       - backend
     networks:
       - lybook-network
+    restart: always
 
 volumes:
   mongo_data:
