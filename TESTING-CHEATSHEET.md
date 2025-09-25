@@ -61,9 +61,14 @@ curl -X POST "http://localhost:5000/api/books" \
     "isbn": "978-1234567890",
     "publishedYear": 2024,
     "genre": "Science Fiction",
+    "coverImage": "https://bookcoverzone.com/slir/h1000/png24-front/bookcover0000319.jpg",
     "description": "An incredible story about the future",
     "quantity": 10
   }'
+
+# Add a book with terminal
+curl -X POST "http://localhost:5000/api/books" -H "Content-Type: application/json" -d '{"title":"Test Book","author":"Test Author","isbn":"11234567891","publishedYear":2024,"genre":"Fantasy","coverImage":"https://bookcoverzone.com/slir/h1000/png24-front/bookcover0000319.jpg","description":"Test description","quantity":5}'
+
 
 # Add book via Kong Gateway
 curl -X POST "http://localhost:8000/api/books" \
