@@ -79,6 +79,7 @@ curl -X POST "http://localhost:8000/api/books" \
     "isbn": "978-0987654321",
     "publishedYear": 2024,
     "genre": "Fantasy",
+    "coverImage": "https://bookcoverzone.com/slir/h1000/png24-front/bookcover0000319.jpg",
     "description": "Book added through Kong",
     "quantity": 5
   }'
